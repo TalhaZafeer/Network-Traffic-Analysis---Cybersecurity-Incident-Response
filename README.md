@@ -28,11 +28,13 @@ The captured tcpdump log provides key insights into the interaction between your
 # Analysis  <a name="analysis">
 
 **Problem Found in the tcpdump Log**
+
 The tcpdump log reveals that the UDP protocol was used as part of the DNS query process to contact the DNS server. However, the server responded with ICMP error messages, indicating issues in reaching the DNS server. The error "udp port 53 unreachable" points to a failure in DNS services, as port 53 is reserved for DNS protocol traffic.
 
 This issue was evident across multiple attempts, as each time the browser attempted to resolve the domain name, the DNS server returned the same ICMP error message, preventing the browser from retrieving the necessary IP address to load the website.
 
 **Cause of the Incident**
+
 The incident occurred around 1:24 PM. Customers reported the "destination port unreachable" error, which led to an investigation using tcpdump. The log data indicates that DNS port 53 was unreachable. This could be caused by several factors, including:
 
 **DNS Server Down:** The DNS server might be offline, possibly due to a misconfiguration or a successful Denial of Service (DoS) attack.
@@ -44,10 +46,10 @@ The analysis shows that the DNS server at IP 203.0.113.2 is not responding to DN
 # Conclusion  <a name="conclusion">
 This concludes my network traffic analysis for the DNS service disruption. I hope this writeup provides valuable insights into the process of diagnosing network-related issues and highlights the importance of thorough traffic analysis in cybersecurity.
 
-Self-Evaluation:
+**Self-Evaluation:**
 I feel confident in my ability to identify and interpret key network traffic indicators that point to service disruptions. Successfully pinpointing the DNS issue and understanding its impact on accessibility gave me a strong sense of accomplishment. This assignment tested my knowledge and reinforced my hands-on skills in network troubleshooting.
 
-Lessons Learned:
+**Lessons Learned:**
 While I was able to diagnose the issue effectively, I realized the importance of diving deeper into the underlying causes of DNS failures, particularly in the context of broader network infrastructure. I also learned to balance technical detail with clarity, ensuring that the findings are both precise and understandable for stakeholders. Going forward, I aim to improve my documentation skills to better communicate technical findings to non-technical audiences.
 
 
