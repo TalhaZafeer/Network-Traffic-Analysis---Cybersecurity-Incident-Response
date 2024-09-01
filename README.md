@@ -23,6 +23,9 @@ Several customers reported that they were unable to access the website www.yummy
 
 Upon visiting the website, you also received the same error. To troubleshoot the issue, you utilized a network analyzer tool, tcpdump, to capture network traffic data. During the analysis, it was revealed that your browser sent a DNS query via UDP protocol to retrieve the IP address of the website. However, the DNS server responded with ICMP packets containing the error message: "udp port 53 unreachable," indicating that the DNS server could not be reached.
 
+![alt text](https://github.com/TalhaZafeer/Network-Traffic-Analysis---Cybersecurity-Incident-Response/blob/main/tcp_dum.png?raw=true)
+
+
 The captured tcpdump log provides key insights into the interaction between your computer and the DNS server, showing multiple attempts to query the DNS server and the subsequent ICMP error responses.
 
 # Analysis  <a name="analysis">
